@@ -18,6 +18,7 @@ namespace BlogCore.AccesoDatos.Data
         {
             var objDesdeDb = _db.Slider.FirstOrDefault(m => m.Id == slider.Id);
             objDesdeDb.Nombre = slider.Nombre;
+            objDesdeDb.Estado = slider.Estado;
             objDesdeDb.UrlImagen = slider.UrlImagen;
             _db.SaveChanges();
         }
